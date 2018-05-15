@@ -1,0 +1,25 @@
+spring:
+#    application:
+#        name: alpha-cart
+#    cloud:
+#        config:
+#            fail-fast: true
+#            label: dev
+#            uri: http://192.168.255.130:1111/registry/config
+#            profile: dev
+#            retry:
+#                  initial-interval: 1000
+#                  max-interval: 2000
+#                  max-attempts: 100
+
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.255.2/alpha_60?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true
+        username: alpha_dev
+        password: EJ82fVcH3h!K
+
+    data:
+        elasticsearch:
+        cluster-nodes: 192.168.255.106:9300
+        cluster-name: icourtcluster
+        local: false

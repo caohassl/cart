@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<portable-config>
+    <!-- spring boot  -->
+    <config-file path="WEB-INF/classes/bootstrap.yml">
+        <replace key="spring.cloud.config.profile">pre</replace>
+        <replace key="spring.cloud.config.uri">http://172.16.9.122:1111/registry/config</replace>
+        <replace key="spring.cloud.config.label">master</replace>
+    </config-file>
+</portable-config>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icourt.cart.dao" >
+    <select id="getUserCartNumber" resultType="int">
+        select count(1) as num from bussiness_cart where user_id = #{userId} and office_id = #{officeId} and bussiness_status = #{status}
+    </select>
+
+
+</mapper>

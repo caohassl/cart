@@ -1,0 +1,13 @@
+.idea/
+build/
+*.iml
+*.class
+book-api/target/
+book-provider/target/
+book-web/target/
+data
+*/target
+.classpath
+.settings/
+.project
+.DS_Store

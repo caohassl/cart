@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<portable-config>
+    <!-- spring boot  -->
+    <config-file path="WEB-INF/classes/bootstrap.yml">
+        <replace key="spring.cloud.config.profile">test</replace>
+        <replace key="spring.cloud.config.uri">http://192.168.255.10:1111/registry/config</replace>
+        <replace key="spring.cloud.config.label">test</replace>
+    </config-file>
+</portable-config>

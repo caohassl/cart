@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.icourt</groupId>
+    <artifactId>ilaw-cart</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cart-web</module>
+        <module>cart-api</module>
+        <module>cart-provider</module>
+    </modules>
+    <parent>
+        <artifactId>ssf-parent</artifactId>
+        <groupId>com.icourt</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <ssf-core.version>1.0-SNAPSHOT</ssf-core.version>
+        <cart.version>1.0-SNAPSHOT</cart.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
+        <spring-boot-admin.version>1.5.2</spring-boot-admin.version>
+        <java.version>1.8</java.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.icourt.cloud</groupId>
+                <artifactId>icourt-cloud-dependencies</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>icourt-release</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>icourt-snapshot</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>icourt-snapshot</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-snapshots/</url>
+        </repository>
+        <repository>
+            <id>icourt-release</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>icourt-maven-plugin-snapshot-repository</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-snapshots/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>icourt-maven-plugin-snapshot-release</id>
+            <url>http://nexus.alphalawyer.cn/repository/icourt-release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
