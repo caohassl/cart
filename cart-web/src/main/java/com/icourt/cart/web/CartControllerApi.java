@@ -32,11 +32,11 @@ public class CartControllerApi implements ICartControllerApi {
     @ApiOperation(value = "", notes = "获取购物车信息数量", httpMethod = "GET", response = CartResponse.class)
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     public CartResponse getUserCartNumber() {
-//        Pair part = cartServiceImpl.getUserCartNumber();
-//        CartResponse cartResponse = CartResponse.SUCCESS;
-//        cartResponse.setData(part);
-//        return cartResponse;
-        return CartResponse.SUCCESS;
+        Pair part = cartServiceImpl.getUserCartNumber();
+        CartResponse cartResponse = CartResponse.SUCCESS;
+        cartResponse.setData(part);
+        return cartResponse;
+//        return CartResponse.SUCCESS;
     }
 
     @Override

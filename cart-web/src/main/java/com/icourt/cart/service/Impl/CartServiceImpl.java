@@ -10,6 +10,7 @@ import com.icourt.cart.service.CartService;
 import com.icourt.cart.vo.CartBussinessVO;
 import com.icourt.user.core.TokenUser;
 import com.icourt.user.core.UserContext;
+import com.icourt.user.service.ITokenProviderService;
 import javafx.util.Pair;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.search.SearchResponse;
@@ -30,6 +31,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,6 +44,10 @@ import java.util.Map;
 @Transactional
 @Slf4j
 public class CartServiceImpl implements CartService {
+
+
+    @Resource
+    ITokenProviderService tokenProviderService;
 
     @Autowired
     private CartDao cartDao;
@@ -163,12 +169,12 @@ public class CartServiceImpl implements CartService {
         }
 
 
-//        Page judgmentPage = elasticsearchTemplate.queryForPage(searchQuery, JudgementDTO.class, new SearchResultMapper() {
+//        Page judgmentPage = elasticsearchTemplate.queryForPage(searchQuery, JudgementInfoDTO.class, new SearchResultMapper() {
 //            @Override
 //            public <T> Page<T> mapResults(SearchResponse response, Class<T> clazz, Pageable pageable) {
-//                List<JudgementDTO> judgementDTOs = new ArrayList<>();
+//                List<JudgementInfoDTO> judgementDTOs = new ArrayList<>();
 //                for(SearchHit searchHit:response.getHits().getHits()){
-//                    JudgementDTO judgementDTO = new JudgementDTO();
+//                    JudgementInfoDTO judgementDTO = new JudgementInfoDTO();
 //                    Map<String, Object> source = searchHit.getSource();
 //                    judgementDTO.setJid(searchHit.getId());
 //                    judgementDTO.setTitle((String) source.get(CartConstant.JUDGEMENT_CASENAME));
@@ -223,7 +229,7 @@ public class CartServiceImpl implements CartService {
 //            throw new CartServiceException();
 //        }
 //
-//        List<JudgementDTO> judgements = (List<JudgementDTO>) judgmentPage.getContent();
+//        List<JudgementInfoDTO> judgements = (List<JudgementInfoDTO>) judgmentPage.getContent();
 //        System.out.println(judgements);
 //        System.out.println(judgements.get(0).getJid());
     }

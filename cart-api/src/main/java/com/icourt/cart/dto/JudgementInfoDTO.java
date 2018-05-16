@@ -11,7 +11,7 @@ import java.util.List;
  * @author lan
  */
 @Data
-public class JudgementDTO implements Serializable {
+public class JudgementInfoDTO implements Serializable {
 
     /**
      * id : eb611c68-1f24-4aef-82df-45575a607445

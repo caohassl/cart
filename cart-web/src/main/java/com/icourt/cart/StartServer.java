@@ -16,9 +16,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication(scanBasePackages="com.icourt")
 @EnableAutoConfiguration
 @EnableJsonLogger
-//@EnableDiscoveryClient
-//@EnableCircuitBreaker
-//@EnableFeignClients
+@EnableDiscoveryClient
+@EnableCircuitBreaker
+@EnableFeignClients
 @Slf4j
 public class StartServer {
 
