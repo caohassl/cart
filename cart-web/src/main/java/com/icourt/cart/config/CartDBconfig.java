@@ -23,26 +23,11 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = "com.icourt.cart.dao", sqlSessionTemplateRef = "cartSqlSessionTemplate")
 public class CartDBconfig {
 
-    @Value("${spring.datasource.url}")
-    private String url;
-
-    @Value("${spring.datasource.username}")
-    private String username;
-
-    @Value("${spring.datasource.password}")
-    private String password;
-
-    @Value("${spring.datasource.driver-class-name}")
-    private String driverClassName;
-
 
     @Bean("cartDataSource")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource cartDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setUrl(url);
-        dataSource.setUsername(username);
-        dataSource.setPassword(password);
-        dataSource.setDriverClassName(driverClassName);
         dataSource.setMaxActive(150);
         dataSource.setInitialSize(150);
         return dataSource;

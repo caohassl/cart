@@ -20,6 +20,6 @@ spring:
 
     data:
         elasticsearch:
-        cluster-nodes: 192.168.255.106:9300
-        cluster-name: icourtcluster
-        local: false
+            cluster-nodes: 192.168.255.106:9300
+            cluster-name: icourtcluster
+            local: false

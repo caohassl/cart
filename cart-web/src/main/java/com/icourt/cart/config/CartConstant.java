@@ -7,6 +7,11 @@ public final class CartConstant {
     private CartConstant() {}
 
     /**
+     * 数据传输最大量
+     */
+    public static int CART_MAX_SAVE = 200;
+
+    /**
      * 案例库地址
      */
     public static String JUDGEMENT_INDICES = "judgement_20180509-02";
@@ -17,6 +22,11 @@ public final class CartConstant {
      */
     public static String LAWREGU_INDICES = "lawregu_sushi_v4";
     public static String LAWREGU_TYPE = "law_regu";
+
+    /**
+     * 案例库编号
+     */
+    public static String JUDGEMENT_JID = "jid";
 
     /**
      * 案例库标题
@@ -47,6 +57,11 @@ public final class CartConstant {
      * 案例库案例时间
      */
     public static String JUDGEMENT_JUDGEMENTINFO_DATE = "all_judgementinfo_date";
+
+    /**
+     * 案例库案例时间
+     */
+    public static String JUDGEMENT_PARAGRAPHS = "paragraphs";
 
     /**
      * 案例库publish类型
