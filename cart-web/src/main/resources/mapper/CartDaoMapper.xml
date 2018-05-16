@@ -2,10 +2,44 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.icourt.cart.dao" >
+<mapper namespace="com.icourt.cart.dao.CartDao" >
     <select id="getUserCartNumber" resultType="int">
         select count(1) as num from bussiness_cart where user_id = #{userId} and office_id = #{officeId} and bussiness_status = #{status}
     </select>
+
+    <insert id="insertCarts">
+        <selectKey keyProperty="cart_id" resultType="String" order="BEFORE">
+            select replace(uuid(),'-','') UUID
+        </selectKey>
+        <![CDATA[
+        insert into bussiness_cart(
+                                    cart_id,
+                                        user_id,
+                                        office_id,
+                                        bussiness_type,
+                                        bussiness_id,
+                                        bussiness_status,
+                                        bussiness_title,
+                                        bussiness_content,
+                                        bussiness_basic_info,
+                                        score,
+                                        cst_create_time,
+                                        cst_update_time
+                    )values(
+                    #{id,jdbcType=VARCHAR},
+                    #{subscribeId,jdbcType=VARCHAR},
+                    #{userId,jdbcType=VARCHAR},
+                    #{matterId,jdbcType=VARCHAR},
+                    #{officeId,jdbcType=VARCHAR},
+                    #{lookTime,jdbcType=TIMESTAMP}),
+                    #{id,jdbcType=VARCHAR},
+                    #{subscribeId,jdbcType=VARCHAR},
+                    #{userId,jdbcType=VARCHAR},
+                    #{matterId,jdbcType=VARCHAR},
+                    #{officeId,jdbcType=VARCHAR},
+                    #{lookTime,jdbcType=TIMESTAMP})
+        ]]>
+    </insert>
 
 
 </mapper>

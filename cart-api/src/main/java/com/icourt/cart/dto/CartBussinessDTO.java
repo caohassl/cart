@@ -58,7 +58,7 @@ public class CartBussinessDTO extends CartBaseDTO {
     String bussinessBasicInfo;
 
     /**
-     * 收藏分数，用于排序
+     * 收藏分数，用于排序,暂时不用
      */
     int score;
 

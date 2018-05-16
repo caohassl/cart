@@ -2,6 +2,7 @@ package com.icourt.cart;
 
 import com.icourt.core.log.EnableJsonLogger;
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,9 +17,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication(scanBasePackages="com.icourt")
 @EnableAutoConfiguration
 @EnableJsonLogger
-//@EnableDiscoveryClient
-//@EnableCircuitBreaker
-//@EnableFeignClients
+@EnableDiscoveryClient
+@EnableCircuitBreaker
+@EnableFeignClients
+@MapperScan("com.icourt.cart.dao")
 @Slf4j
 public class StartServer {
 

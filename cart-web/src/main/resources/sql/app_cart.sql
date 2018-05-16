@@ -9,9 +9,9 @@ CREATE TABLE bussiness_cart
   bussiness_title VARCHAR(100),
   bussiness_content VARCHAR(500),
   bussiness_basic_info VARCHAR(3000) COMMENT '收藏文件基本信息',
-  score INT(11) NOT NULL,
+  score INT(11),
   cst_create_time DATETIME NOT NULL,
-  cst_update_time DATETIME NOT NULL,
+  cst_update_time DATETIME NOT NULL
 );
 CREATE INDEX IDX_CART_STATUS ON web_cart (USER_ID , OFFICE_ID, bussiness_status, );
 
