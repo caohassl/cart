@@ -30,22 +30,11 @@
             <artifactId>springfox-bean-validators</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.nimbusds</groupId>
-            <artifactId>nimbus-jose-jwt</artifactId>
-            <version>4.0-rc3</version>
-        </dependency>
 
-        <!--ssf-->
-        <dependency>
-            <groupId>com.icourt</groupId>
-            <artifactId>ssf-core</artifactId>
-            <version>${ssf-core.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
-        <finalName>book-api</finalName>
+        <finalName>cart-api</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

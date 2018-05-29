@@ -1,0 +1,272 @@
+{
+  "law_regu": {
+    "properties": {
+      "cap_url": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "title": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "history_titles": {
+        "type": "string",
+        "term_vector": "with_positions_offsets",
+        "analyzer": "standard",
+        "include_in_all": false
+      },
+      "history_type": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "integer"
+      },
+      "title_term": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "title_format": {
+        "include_in_all": false,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "title_format_term": {
+        "type": "string",
+        "index": "not_analyzed",
+        "include_in_all": false
+      },
+      "content": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "posting_date": {
+        "format": "yyyy年MM月dd日",
+        "type": "date"
+      },
+      "posting_date_str": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "effective_range": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "province": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "dispatch_authority": {
+        "type": "multi_field",
+        "fields": {
+          "not_analyzed": {
+            "include_in_all": false,
+            "index": "not_analyzed",
+            "type": "string"
+          },
+          "dispatch_authority": {
+            "include_in_all": true,
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets",
+            "type": "string"
+          }
+        }
+      },
+      "document_number": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "time_limited": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "effective_date": {
+        "format": "yyyy年MM月dd日",
+        "type": "date"
+      },
+      "effective_date_str": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "classification": {
+        "include_in_all": true,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "lawid": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "law_regulation_introductions": {
+        "include_in_all": false,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "law_regulation_introductions_jsons": {
+        "include_in_all": false,
+        "type": "nested",
+        "properties": {
+          "fullName":{ "type":"string", "index": "not_analyzed"},
+          "name":{  "type":"string", "index": "not_analyzed"},
+          "text":{
+            "type":"string",
+            "search_analyzer": "standard",
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets"
+          },
+          "level":{  "type":"integer", "index": "not_analyzed"},
+          "index":{ "type":"integer", "index": "not_analyzed"},
+          "referenceCount":{  "type":"integer", "index": "not_analyzed"}
+        }
+      },
+      "law_regulation_indexes": {
+        "include_in_all": false,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "law_regulation_indexes_jsons": {
+        "include_in_all": false,
+        "type": "nested",
+        "properties": {
+          "fullName":{ "type":"string", "index": "not_analyzed"},
+          "name":{  "type":"string", "index": "not_analyzed"},
+          "text":{
+            "type":"string",
+            "search_analyzer": "standard",
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets"
+          },
+          "level":{  "type":"integer", "index": "not_analyzed"},
+          "index":{ "type":"integer", "index": "not_analyzed"},
+          "referenceCount":{  "type":"integer", "index": "not_analyzed"}
+        }
+      },
+      "attachment_url": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "attachment_file_url": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ce_url": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "cnce_url": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "eff_level": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "type": {
+        "type": "integer"
+      },
+      "flag": {
+        "type": "integer"
+      },
+      "lid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "post_persion_name": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "post_persion_duty": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "credit_line": {
+        "type": "string",
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets"
+      },
+      "pass_meeting": {
+        "type": "string",
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets"
+      },
+      "pass_time": {
+        "type": "string",
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets"
+      },
+      "indicate": {
+        "type": "string",
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets"
+      },
+      "exist_dispatch_authority": {
+        "type": "boolean"
+      },
+      "exist_posting_date": {
+        "type": "boolean"
+      },
+      "law_regulation_article_jsons": {
+        "type": "nested",
+        "include_in_all": false,
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": false
+          },
+          "index": {
+            "type": "integer",
+            "include_in_all": false
+          },
+          "name": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": false
+          },
+          "text": {
+            "type": "string",
+            "term_vector": "with_positions_offsets",
+            "analyzer": "no_filter_analyzer",
+            "include_in_all": false
+          }
+        }
+      }
+    },
+    "_all": {
+      "enabled": false,
+      "index": "not_analyzed"
+    }
+  }
+}

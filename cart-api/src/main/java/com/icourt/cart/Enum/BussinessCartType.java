@@ -11,6 +11,8 @@ public enum BussinessCartType {
 
     JUDICIAL,
 
-    JUDGEMENT;
+    JUDGEMENT,
+
+    REPORT;
 
 }

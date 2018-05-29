@@ -11,7 +11,7 @@ import java.util.List;
  * @author lan
  */
 @Data
-public class LawreguInfoDTO implements Serializable {
+public class LawReguInfoDTO implements Serializable {
 
     /**
      * lid : d2914ce87bf7a6292bbe717f731cd610
@@ -33,4 +33,5 @@ public class LawreguInfoDTO implements Serializable {
     private String effectiveDate;
     private String dispatchAuthority;
     private String content;
+    private String fullName;
 }

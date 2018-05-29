@@ -1,0 +1,32 @@
+{
+  "number_of_shards": 14,
+  "number_of_replicas": 0,
+  "index": {
+    "refresh_interval": "-1",
+    "analysis": {
+      "analyzer": {
+        "no_filter_analyzer": {
+          "type": "custom",
+          "tokenizer": "ngram_one",
+          "filter": [
+            "cft"
+          ]
+        }
+      },
+      "filter": {
+        "cft": {
+          "type": "length",
+          "mix": "1",
+          "max": "20"
+        }
+      },
+      "tokenizer": {
+        "ngram_one": {
+          "type": "ngram",
+          "min_gram": 1,
+          "max_gram": 1
+        }
+      }
+    }
+  }
+}

@@ -3,15 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.icourt.cart.dao.CartDao" >
-    <select id="getUserCartNumber" resultType="int">
+    <select id="getUserCartNumber" resultType="Integer">
         select count(1) as num from bussiness_cart where user_id = #{userId} and office_id = #{officeId} and bussiness_status = #{status}
     </select>
 
     <insert id="insertCarts">
-        <selectKey keyProperty="cart_id" resultType="String" order="BEFORE">
-            select replace(uuid(),'-','') UUID
-        </selectKey>
-        <![CDATA[
         insert into bussiness_cart(
                                     cart_id,
                                         user_id,
@@ -25,21 +21,43 @@
                                         score,
                                         cst_create_time,
                                         cst_update_time
-                    )values(
-                    #{id,jdbcType=VARCHAR},
-                    #{subscribeId,jdbcType=VARCHAR},
-                    #{userId,jdbcType=VARCHAR},
-                    #{matterId,jdbcType=VARCHAR},
-                    #{officeId,jdbcType=VARCHAR},
-                    #{lookTime,jdbcType=TIMESTAMP}),
-                    #{id,jdbcType=VARCHAR},
-                    #{subscribeId,jdbcType=VARCHAR},
-                    #{userId,jdbcType=VARCHAR},
-                    #{matterId,jdbcType=VARCHAR},
-                    #{officeId,jdbcType=VARCHAR},
-                    #{lookTime,jdbcType=TIMESTAMP})
-        ]]>
+                    )values
+                    <foreach collection="cartBussinessDTOs" item="cartBussinessDTO" separator=",">
+                        (#{cartBussinessDTO.cartId},
+                        #{cartBussinessDTO.userId},
+                        #{cartBussinessDTO.officeId},
+                        #{cartBussinessDTO.bussinessType},
+                        #{cartBussinessDTO.bussinessId},
+                        #{cartBussinessDTO.bussinessStatus},
+                        #{cartBussinessDTO.bussinessTitle},
+                        #{cartBussinessDTO.bussinessContent},
+                        #{cartBussinessDTO.bussinessBasicInfo},
+                        #{cartBussinessDTO.score},
+                        #{cartBussinessDTO.cstCreateTime},
+                        #{cartBussinessDTO.cstUpdateTime})
+                    </foreach>
     </insert>
+
+    <select id="selectCartsByUser" resultType="CartBussinessDTO">
+        select * from bussiness_cart
+        where user_id = #{userId} and
+            office_id = #{officeId} and
+            bussiness_status = #{status}
+            <if test="bussinessType != null and bussinessType != ''">
+                and bussiness_type = #{bussinessType}
+            </if>
+        order by score , cst_create_time desc
+    </select>
+
+    <update id="updateCartScore">
+        update bussiness_cart set score = #{sort}
+        where user_id = #{userId} and cart_id = #{cartId} and office_id = #{officeId}
+    </update>
+
+    <update id="updateCartBussinessStatus">
+        update bussiness_cart set bussiness_status = #{bussinessStatus}
+        where user_id = #{userId} and cart_id = #{cartId} and office_id = #{officeId}
+    </update>
 
 
 </mapper>

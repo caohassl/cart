@@ -12,20 +12,20 @@ import lombok.Data;
 public class CartBussinessDTO extends CartBaseDTO {
 
     /**
-     * 主键id
+     *  主键id
      */
     @Id
-    int CartId;
+    int cartId;
 
     /**
-     * 用户编号
+     *  用户编号
      */
-    String UserId;
+    String userId;
 
     /**
      *  律所编号
      */
-    String OfficeId;
+    String officeId;
 
     /**
      *  对应收藏编号，案例中的jid，法规中的lid，司法观点中的vid
@@ -43,22 +43,22 @@ public class CartBussinessDTO extends CartBaseDTO {
     String bussinessStatus;
 
     /**
-     * 收藏标题
+     *  收藏标题
      */
     String bussinessTitle;
 
     /**
-     * 收藏内容
+     *  收藏内容
      */
     String bussinessContent;
 
     /**
-     * 收藏文件基本信息
+     *  收藏文件基本信息
      */
     String bussinessBasicInfo;
 
     /**
-     * 收藏分数，用于排序,暂时不用
+     *  收藏分数，用于排序
      */
     int score;
 

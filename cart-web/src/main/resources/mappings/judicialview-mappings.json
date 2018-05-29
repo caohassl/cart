@@ -1,0 +1,174 @@
+{
+  "judicial_view": {
+    "properties": {
+      "rollTitle": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "keywordsNoAnnotation": {
+        "type": "multi_field",
+        "fields": {
+          "keywordsNoAnnotation": {
+            "analyzer": "whitespace",
+            "type": "string"
+          },
+          "nofilter": {
+            "include_in_all": true,
+            "search_analyzer": "standard",
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets",
+            "type": "string"
+          }
+        }
+      },
+      "judicialViewParagraphs": {
+        "type": "string"
+      },
+      "judicialViewIndexes": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "paragraphs": {
+        "include_in_all": false,
+        "type": "nested",
+        "properties": {
+          "ext": {
+            "index": "not_analyzed",
+            "type": "string"
+          },
+          "level": {
+            "index": "not_analyzed",
+            "type": "integer"
+          },
+          "name": {
+            "search_analyzer": "standard",
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets",
+            "type": "string"
+          },
+          "index": {
+            "index": "not_analyzed",
+            "type": "integer"
+          },
+          "type": {
+            "index": "not_analyzed",
+            "type": "integer"
+          },
+          "content": {
+            "search_analyzer": "standard",
+            "analyzer": "standard",
+            "term_vector": "with_positions_offsets",
+            "type": "string"
+          }
+        }
+      },
+      "content": {
+        "include_in_all": true,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "judicialViewQuoteCases": {
+        "analyzer": "standard",
+        "type": "string"
+      },
+      "vid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "subSectionTitle": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "sectionTitle": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "judicialViewQuoteLaws": {
+        "analyzer": "standard",
+        "type": "string"
+      },
+      "chapterId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "gmtUpdate": {
+        "index": "not_analyzed",
+        "type": "date"
+      },
+      "volumeId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "chapterTitle": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "volumeTitle": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "editionDesc": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "editionId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "authorRemark": {
+        "include_in_all": true,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "sectionId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "gmtCreate": {
+        "index": "not_analyzed",
+        "type": "date"
+      },
+      "subSectionId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "pageNum": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "viewTitle": {
+        "include_in_all": true,
+        "search_analyzer": "standard",
+        "analyzer": "standard",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "rollId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "viewId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "judicialViewQuotes": {
+        "type": "string"
+      },
+      "viewTitleNoAnnotation": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "keywords": {
+        "index": "whitespace",
+        "type": "string"
+      }
+    },
+    "_all": {
+      "enabled": false
+    }
+  }
+}

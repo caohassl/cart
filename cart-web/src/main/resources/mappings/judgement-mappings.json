@@ -1,0 +1,671 @@
+{
+  "judgement": {
+    "properties": {
+      "retrial_text_opinion": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_judgementinfo_date": {
+        "format": "yyyy-MM-dd",
+        "type": "date"
+      },
+      "all_caseinfo_court_term": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_caseinfo_casename": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "boost": 10,
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_originaltrialinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_text_litigantinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_applicant_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_appellee_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_clerk": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_judgement": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_originalsecondtrialinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "jid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_text_cause_term": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "retrial_text_originalfirsttrialinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_text_cause": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_appellant_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_judgement": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_caseinfo_court": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_chief_judge": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_people_jury": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_acting_judge": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_caseinfo_casenumber": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "thirdId": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "flag": {
+        "type": "integer"
+      },
+      "retrial_text_respondent_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_firstinstance_fact": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_judges": {
+        "include_in_all": true,
+        "analyzer": "whitespace",
+        "type": "string"
+      },
+      "all_chief_judge_term": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "firstinstance_text_opinion": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_caseinfo_leveloftria": {
+        "type": "integer"
+      },
+      "secondinstance_text_fact": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_basicinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_defendant_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_basicinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_acting_judge_term": {
+        "type": "string"
+      },
+      "retrial_text_originalretrialtrialinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_firstinstance_judgement": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_fact": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "id": {
+        "type": "integer"
+      },
+      "all_judge": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_opinion": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_plaintiff_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "secondinstance_text_firstinstance_opinion": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "retrial_text_procuratorate_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_judgement": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_thirdparty_claim": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_judge_term": {
+        "type": "string"
+      },
+      "secondinstance_text_basicinfo": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "firstinstance_text_fact": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_text_judge": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "all_text_attachment": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "level1_case": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "level2_case": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "level3_case": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "level4_case": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "level5_case": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "level_case_all_analyzed": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "super_court": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "higher_court": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "intermediate_court": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "court_level": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_judge_courts": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_judge_courts_analyzed": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "province": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "city": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "region": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "lawyer_firm": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "lawyer_firm_analyzed": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "lawyer_term": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_litigant": {
+        "include_in_all": true,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "all_litigant_analyzed": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "lawfirm_term": {
+        "include_in_all": true,
+        "analyzer": "whitespace",
+        "type": "string"
+      },
+      "lawfirm_analyzed": {
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "plaintiff": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "defendant": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "thirdparty": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "appellant": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "appellee": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "applicant": {
+        "include_in_all": false,
+        "type": "string"
+      },
+      "respondent": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "otherpary": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "identity": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "orderList": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "type": {
+        "type": "integer"
+      },
+      "contracts": {
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "acceptance_fee": {
+        "type": "double"
+      },
+      "acceptance_fee_level": {
+        "type": "integer"
+      },
+      "claim_value": {
+        "type": "integer"
+      },
+      "law_regu_jsons": {
+        "include_in_all": false,
+        "index": "no",
+        "type": "string"
+      },
+      "law_regu_detail_jsons": {
+        "include_in_all": false,
+        "index": "no",
+        "type": "string"
+      },
+      "law_regu_detail_origin_jsons": {
+        "include_in_all": false,
+        "index": "no",
+        "type": "string"
+      },
+      "casenumber_link_bean_list": {
+        "include_in_all":false,
+        "type": "nested",
+        "properties": {
+          "casenumber_str":{ "type":"string", "index": "not_analyzed"},
+          "jid":{  "type":"string", "index": "not_analyzed"}
+        }
+      },
+      "casenumber_json": {
+        "include_in_all": false,
+        "index": "no",
+        "type": "string"
+      },
+      "key_words":{
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "key_words_term":{
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "sight_words":{
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "sight_words_term":{
+        "include_in_all": false,
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "dispute_focus":{
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "evidence":{
+        "include_in_all": true,
+        "search_analyzer": "no_filter_analyzer",
+        "analyzer": "no_filter_analyzer",
+        "term_vector": "with_positions_offsets",
+        "type": "string"
+      },
+      "publish_type": {
+        "type": "integer"
+      },
+      "source_type": {
+        "type": "integer"
+      },
+      "law_regu_mapping_jsons": {
+        "type": "nested",
+        "properties": {
+          "lawRegu": {
+            "type": "nested",
+            "properties": {
+              "extraFullName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguDetailFullName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "indexInfo": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lid": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguType": {
+                "type": "integer",
+                "index": "not_analyzed"
+              },
+              "lawReguDetailToItemName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+
+          },
+          "lawReguDetail": {
+            "type": "nested",
+            "properties": {
+              "extraFullName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguDetailFullName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "indexInfo": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lid": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lawReguType": {
+                "type": "integer",
+                "index": "not_analyzed"
+              },
+              "lawReguDetailToItemName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "law_regu_origin_mapping_jsons": {
+        "include_in_all": false,
+        "type": "nested",
+        "properties": {
+          "orginFullName": {
+            "type": "string",
+            "index": "no"
+          },
+          "lawReguFullName": {
+            "type": "string",
+            "index": "no"
+          }
+        }
+      }
+    },
+    "_all": {
+      "enabled": false,
+      "index": "not_analyzed"
+    }
+  }
+}

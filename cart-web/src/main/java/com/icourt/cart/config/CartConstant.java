@@ -24,13 +24,13 @@ public final class CartConstant {
     /**
      * 案例库地址
      */
-    public static String JUDGEMENT_INDICES = "judgement_20180509-02";
+    public static String JUDGEMENT_INDICES = "judgement_20180516-02";
     public static String JUDGEMENT_TYPE = "judgement";
 
     /**
      * 法规库地址
      */
-    public static String LAWREGU_INDICES = "lawregu_sushi_v4";
+    public static String LAWREGU_INDICES = "lawregu_dev";
     public static String LAWREGU_TYPE = "law_regu";
 
     /**
@@ -66,6 +66,9 @@ public final class CartConstant {
     public static String LAWREGU_EFFECTIVE_DATA = "effective_date_str";
     public static String LAWREGU_DISPATCH_AUTHORITY = "dispatch_authority";
     public static String LAWREGU_CONTENT = "content";
+    public static String LAWREGU_INTRODUCTIONS = "law_regulation_introductions_jsons";
+    public static String LAWREGU_INTRODUCTIONS_FULL_NAME = "fullName";
+    public static String LAWREGU_INTRODUCTIONS_TEXT = "text";
 
 
     /**
